@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BleGattServer</string>
+    <string name="restart_server">Restart server</string>
+</resources>

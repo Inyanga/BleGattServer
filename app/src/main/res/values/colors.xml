@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--<color name="matrix">#008F11</color>-->
+    <color name="matrix">#558b2f</color>
+
+    <color name="matrix_light">#8bc34a</color>
+
+
+</resources>
