@@ -12,7 +12,9 @@ public class GattServerProfile {
 
     public static final String STATUS_ADVERTISING = "Advertising";
     public static final String STATUS_CONNECTED = "Connected";
+    public static final String STATUS_DISCONNECTED = "Disconnected";
     public static final String STATUS_SERVER_STOPPED = "Server stopped";
-    public static final String STATUS_WRITING_CHAR = "Writing characteristic";
+    public static final String STATUS_WRITING_CHAR = "Receiving data";
     public static final String STATUS_WRITING_CCCD = "Enabling notifications";
+    public static final String STATUS_SENDING_DATA = "Sending data";
 }

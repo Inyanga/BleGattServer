@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements BleEventCallback,
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        logView.setMovementMethod(new ScrollingMovementMethod());
         logger = new Logger(this);
         startServer();
     }
@@ -109,14 +111,18 @@ public class MainActivity extends AppCompatActivity implements BleEventCallback,
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                String logMsg = (newLine) ? msg + "\n" : msg;
-                logView.append(logMsg);
+                if (newLine)
+                    logView.append(msg + "\n");
+                else {
+                    logView.append(msg);
+                }
             }
         });
     }
 
     @Override
     public void onStatus(String status) {
+
         this.status = status;
     }
 

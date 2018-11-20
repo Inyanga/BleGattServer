@@ -11,7 +11,7 @@ public class Logger {
 
     public void log(String msg, boolean newLine, int emptyLines) {
         if (loggerCallback == null) throw new NullPointerException("Logger Callback does not set");
-        for (int i = 0; i <= emptyLines; i++) {
+        for (int i = 0; i < emptyLines; i++) {
             loggerCallback.onLog("", true);
         }
 
